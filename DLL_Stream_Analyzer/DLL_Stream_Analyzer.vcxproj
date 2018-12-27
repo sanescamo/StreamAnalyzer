@@ -148,12 +148,32 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="BinaryFile.hpp" />
+    <ClInclude Include="crc32.hpp" />
+    <ClInclude Include="Demultiplex.h" />
+    <ClInclude Include="hexio.hpp" />
+    <ClInclude Include="loguru.hpp" />
+    <ClInclude Include="media-elements.hpp" />
+    <ClInclude Include="MP2TS.hpp" />
+    <ClInclude Include="PruebaClass.h" />
+    <ClInclude Include="safe-buffer.hpp" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="BinaryFile.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Demultiplex.cpp" />
     <ClCompile Include="dllmain.cpp" />
     <ClCompile Include="DLL_Stream_Analyzer.cpp" />
+    <ClCompile Include="hexio.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="MP2TS.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="PruebaClass.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>

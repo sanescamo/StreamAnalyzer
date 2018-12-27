@@ -30,6 +30,14 @@ namespace WF_Stream_Analyzer
         [DllImport("DLL_Stream_Analyzer")]
         static extern IntPtr test2([MarshalAs(UnmanagedType.LPStr)]String data);
 
+        [DllImport("MathLibrary")]
+        static extern IntPtr test3([MarshalAs(UnmanagedType.LPStr)]String data);
+
+        [DllImport("Stream_Analyzer_MPEG2_DLL")]
+        static extern IntPtr otroTest([MarshalAs(UnmanagedType.LPStr)]String data);
+
+
+
         private void button5_Click(object sender, EventArgs e)
         {
             test("calling from WF testing...\r\n");            
@@ -66,6 +74,14 @@ namespace WF_Stream_Analyzer
         private void button7_Click(object sender, EventArgs e)
         {
             this.dataGridView_table.Rows[0].Cells["No"].Value = 1;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            IntPtr str = otroTest("calling from WF testing...\r\n");
+            string str2 = PtrToStringUtf8(str);
+            int xx = 1;
+            xx++;
         }
     }
 }
